@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JQuery - Métodos parent</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>
+                <h3>CFB Cursos</h3>
+                <span>Curso de JQuery</span>
+                <p>Seletores parent</p>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // parent aponta para o elemento de nível anterior
+        // $("p").parent().css({'border': '1px solid red'})
+        // $("li").parent().css({'border': '1px solid blue'})
+        // $("ul").parent().css({'border': '1px solid green'})
+        // $("div").parent().css({'border': '1px solid yellow'})
+        // $("body").parent().css({'border': '1px solid pink'})
+
+        //parents aponta para TODOS os níveis anteriores
+        // $("p").parents().css({'border': '1px solid red'})
+
+        // parentsUntil aponta para todos os níveis anteriores até tal elemento
+        $("p").parentsUntil('div').css({'border': '1px solid red'})
+    </script>
+</body>
+
+</html>

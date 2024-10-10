@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JQuery - Métodos child e find</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>
+                CFB Cursos
+            </li>
+            <li>
+                Curso de JQuery
+            </li>
+            <li>
+                Seletores parent
+            </li>
+        </ul>
+        <ul>
+            <li>
+                CFB Cursos
+            </li>
+            <li>
+                Curso de JQuery
+            </li>
+            <li>
+                Seletores parent
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // children aponta para os elementos filhos diretos
+        $('div').children().css({'border': '1px solid red'})
+        $('ul').children().css({'border': '1px solid blue'})
+
+        // a partir da div, encontra todos os filhos ul
+        $('div').find('ul').css({'border': '1px solid green'})
+        $('div').find('ul:first').css({'border': '1px solid green'}) // seleciona somente o primeiro encontrado
+        $('div').find('ul:last').css({'border': '1px solid green'}) // seleciona somente o último encontrado
+        $('div').find('*').css({'border': '1px solid yellow'}) // seleciona todos os filhos
+    </script>
+</body>
+
+</html>
