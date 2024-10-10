@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        #bloco {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bloco"></div>
+    <p id="texto"></p>
+
+    <script>
+        // forma 1: eventos separados
+        // $('#bloco').click(() => {
+        //     $('#texto').text('Clicando no quadrado')
+        // })
+        // $('#bloco').mouseenter(() => {
+        //     $('#texto').text('Mouse entrou no quadrado')
+        // })
+        // $('#bloco').mouseleave(() => {
+        //     $('#texto').text('Mouse saiu do quadrado')
+        // })
+        // $('#bloco').mousemove(() => {
+        //     $('#texto').text('Mouse em movimento no quadrado')
+        // })
+        
+        // forma 2: usando on com vários eventos para a mesma ação
+        // $('#bloco').on('click dblclick', () => {
+        //     $('#texto').text('Clicando no quadrado')
+        // })
+
+        $('#bloco').on({
+            click: () => {$('#texto').text("Clicando no quadrado")},
+            mouseenter: () => {$('#texto').text('Mouse entrou no quadrado')},
+            mouseleave: () => {$('#texto').text('Mouse saiu do quadrado')},
+            mousemove: () => {$('#texto').text('Mouse em movimento no quadrado')},
+            dblclick: () => {$('#texto').text('Duplo clique no quadrado')}
+        })            
+    </script>
+</body>
+
+</html>
